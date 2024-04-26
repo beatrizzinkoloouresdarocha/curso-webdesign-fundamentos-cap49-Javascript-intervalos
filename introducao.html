@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div></div>
     
     <script>
         let n = 0
@@ -13,6 +15,13 @@
             console.log("timeout depois de 2000ms")
         },2000)
 
+        let str =""
+        var d =document.querySelector("div")
+        for(let i =0; i < 1000;i++ ){
+        str += 'i: ${i}--'
+        d.textContent += str
+        }
+        
         const intervalo =setInterval(function () {
             console.log("interval n:",n++)
             if (n >= 10) {
